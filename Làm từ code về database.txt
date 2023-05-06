@@ -1,0 +1,6 @@
+Làm từ code về database 
+
+sau khi tạo và cấu hình thì vào tool package manager console vào cấu hình hai câu phía dưới để tạo database 
+
+1. Add-Migration DbInit
+2. Update-Database
