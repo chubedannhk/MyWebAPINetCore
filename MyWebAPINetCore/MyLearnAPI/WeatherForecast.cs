@@ -1,4 +1,4 @@
-namespace MyWebAPINetCore;
+namespace MyLearnAPI;
 
 public class WeatherForecast
 {
