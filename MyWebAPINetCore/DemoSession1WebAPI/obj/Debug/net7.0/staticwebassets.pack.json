@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\012cfa0372744500a2bbcfa7491fcdff.png",
+      "PackagePath": "staticwebassets\\images\\012cfa0372744500a2bbcfa7491fcdff.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\260506cde0eb480aa04a19126ab26668.png",
+      "PackagePath": "staticwebassets\\images\\260506cde0eb480aa04a19126ab26668.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\97993e3ee0284882a0662433f53d59e8.png",
+      "PackagePath": "staticwebassets\\images\\97993e3ee0284882a0662433f53d59e8.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\cd51ddfc57c2495cbd7f9189d448787f.png",
+      "PackagePath": "staticwebassets\\images\\cd51ddfc57c2495cbd7f9189d448787f.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\cdea623df5d5430ca4739de7745be082.jpg",
+      "PackagePath": "staticwebassets\\images\\cdea623df5d5430ca4739de7745be082.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\da93caa3c5c34e119f4c9d874afa9d13.png",
+      "PackagePath": "staticwebassets\\images\\da93caa3c5c34e119f4c9d874afa9d13.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\db96ef196a0646da83a587ec148c3e22.png",
+      "PackagePath": "staticwebassets\\images\\db96ef196a0646da83a587ec148c3e22.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\dda649ffd9ed4dae81a506200d71804e.png",
+      "PackagePath": "staticwebassets\\images\\dda649ffd9ed4dae81a506200d71804e.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\f12b80c69433430688f81ddbcdc15b0b.jpg",
+      "PackagePath": "staticwebassets\\images\\f12b80c69433430688f81ddbcdc15b0b.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DemoSession1WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DemoSession1WebAPI.props",
+      "PackagePath": "build\\DemoSession1WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DemoSession1WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\DemoSession1WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DemoSession1WebAPI.props",
+      "PackagePath": "buildTransitive\\DemoSession1WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
