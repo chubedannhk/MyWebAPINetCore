@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using MyWebAPI.Data;
+using MyWebAPI.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// giup chay da nen tang
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+
+builder.Services.AddDbContext<BookStoreContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BookStore"));
+});
+// khai bao automapper
+builder.Services.AddAutoMapper(typeof(Program));
+
+// khai bao repositories (service)
+builder.Services.AddScoped<BookService, BookSeriviceImpl>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

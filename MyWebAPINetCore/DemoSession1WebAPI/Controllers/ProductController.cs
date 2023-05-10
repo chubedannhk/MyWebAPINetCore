@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml.Linq;
+using static System.Collections.Specialized.BitVector32;
 
 namespace DemoSession1WebAPI.Controllers;
 [Route("api/product")]
@@ -75,7 +76,7 @@ public class ProductController : Controller
         try
         {
             //var products = productService.FindProductByName(name);
-            
+
             var products = productService.findAll().Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
             return Ok(products);
         }
@@ -91,7 +92,7 @@ public class ProductController : Controller
     {
         try
         {
-            var products = productService.FindProductByPriceRange(minPrice,maxPrice);
+            var products = productService.FindProductByPriceRange(minPrice, maxPrice);
             return Ok(products);
         }
         catch (Exception ex)
@@ -111,7 +112,7 @@ public class ProductController : Controller
         try
         {
 
-           
+
             return Ok(new
             {
                 status = productService.Create(product)
@@ -182,16 +183,16 @@ public class ProductController : Controller
             // tao ten ngau nhien
             var fileName = FileHelper.generateFileName(file.FileName);
             // xay dung duong dan
-            var path = Path.Combine(webHostEnvironment.WebRootPath,"images",fileName);
+            var path = Path.Combine(webHostEnvironment.WebRootPath, "images", fileName);
             using (var fileStream = new FileStream(path, FileMode.Create))
             {
                 file.CopyTo(fileStream);
             }
-                return Ok(new
-                {
-                    // tra cho client duong dan cua cai file do
-                    url = configuration["BaseUrl"]+"images/"+fileName
-                });
+            return Ok(new
+            {
+                // tra cho client duong dan cua cai file do
+                url = configuration["BaseUrl"] + "images/" + fileName
+            });
         }
         catch (Exception ex)
         {
@@ -209,7 +210,7 @@ public class ProductController : Controller
 
             Debug.WriteLine("File Info");
             var fileNames = new List<string>();
-            foreach(var file in files)
+            foreach (var file in files)
             {
                 Debug.WriteLine("File Name: " + file.FileName);
                 Debug.WriteLine("File size: " + file.Length);
@@ -226,7 +227,7 @@ public class ProductController : Controller
                     fileNames.Add(configuration["BaseUrl"] + "images/" + fileName);
                 }
             }
-           
+
             return Ok(fileNames);
         }
         catch (Exception ex)
@@ -236,6 +237,7 @@ public class ProductController : Controller
         }
     }
 
+    // upload files co duoi .csv
     [Produces("application/json")]
     [HttpPost("uploadfile")]
     public IActionResult Uploadfile(IFormFile[] files)
@@ -266,6 +268,11 @@ public class ProductController : Controller
         {
             return BadRequest(ex);
         }
+        // neu lam giao dien thi lam form như vậy
+        //< form method = "post" enctype = "multipart/form-data" action = "/api/uploads" >
+        //< input type = "file" name = "files" multiple />
+        //< button type = "submit" > Upload </ button >
+        //</ form >
     }
 
 }
