@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IZU8jWXJFn6laBO4t9QrAxOClYgI0smQW2GFec1IeKA=",
+  "Hash": "Q7azACdRsHeMjQgAHEVJ3HZBg3IWVCHDkw5qUV4Xj4M=",
   "Source": "DemoSession1WebAPI",
   "BasePath": "_content/DemoSession1WebAPI",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\97993e3ee0284882a0662433f53d59e8.png"
+    },
+    {
+      "Identity": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\98cacf72c3f64e5caaf4c5b5d0ec2028.csv",
+      "SourceId": "DemoSession1WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\",
+      "BasePath": "_content/DemoSession1WebAPI",
+      "RelativePath": "images/98cacf72c3f64e5caaf4c5b5d0ec2028.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\98cacf72c3f64e5caaf4c5b5d0ec2028.csv"
     },
     {
       "Identity": "C:\\Users\\ACER\\Desktop\\CSharp\\MyWebAPINetCore\\MyWebAPINetCore\\DemoSession1WebAPI\\wwwroot\\images\\cd51ddfc57c2495cbd7f9189d448787f.png",
