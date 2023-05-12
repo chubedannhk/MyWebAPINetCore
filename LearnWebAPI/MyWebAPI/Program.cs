@@ -30,7 +30,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 // khai bao repositories (service)
 builder.Services.AddScoped<BookService, BookSeriviceImpl>();
-
+builder.Services.AddScoped<AccountService, AccountServiceImpl>();
 // 
 builder.Services.AddAuthentication(options =>
 {
