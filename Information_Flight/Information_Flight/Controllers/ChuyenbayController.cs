@@ -27,4 +27,20 @@ public class ChuyenbayController : Controller
             return BadRequest(ex);
         }
     }
+
+    [Produces("application/json")]
+    [HttpGet("countghebychuyenbay/{macb}")]
+    public IActionResult CountGheByChuyenBay(int macb)
+    {
+        try
+        {
+            var countghebycb = chuyenBayService.CountGheByChuyenBay(macb);
+            return Ok(countghebycb);
+        }
+        catch (Exception ex)
+        {
+            // ma 400: la co loi roi
+            return BadRequest(ex);
+        }
+    }
 }

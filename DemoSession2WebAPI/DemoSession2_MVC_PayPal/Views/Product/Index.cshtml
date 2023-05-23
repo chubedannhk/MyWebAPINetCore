@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NguyenHoangKhai </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>List Product</h2>
+   
+        <table class="table">
+            <thead>
+                <tr class="danger">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Photo</th>
+                    <th>Created</th>
+                    <th>CategoryId</th>
+                    <th>Featured</th>
+                </tr>
+            </thead>
+            <tbody>
+               @foreach (var pro in ViewBag.product)
+                {
+                    <tr class="active">
+                        <td>@pro.Id</td>
+                        <td>@pro.Name</td>
+                        <td>@pro.Price</td>
+                        <td>@pro.Quantity</td>
+                        <td>@pro.Description</td>
+                        <td>@pro.Status</td>
+                        <td>@pro.Photo</td>
+                        <td>@pro.Created</td>
+                        <td>@pro.CategoryId</td>
+                        <td>@pro.Featured</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

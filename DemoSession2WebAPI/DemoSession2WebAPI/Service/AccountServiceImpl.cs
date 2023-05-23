@@ -60,6 +60,8 @@ public class AccountServiceImpl : AccountService
         }
     }
 
-
-
+    public bool Login(string username, string password)
+    {
+        return db.Accounts.Count(a => a.Username == username && a.Password == password) >0;  
+    }
 }

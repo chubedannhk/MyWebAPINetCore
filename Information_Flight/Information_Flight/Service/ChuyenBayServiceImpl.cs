@@ -10,6 +10,24 @@ public class ChuyenBayServiceImpl : ChuyenBayService
         db = _db;
     }
 
+    public dynamic CountGheByChuyenBay(int macb)
+    {
+        var result = db.Chuyenbays
+        .Where(cb => cb.Macb == macb)
+        .Select(cb => new
+        {
+            Macb = cb.Macb,
+            Tencb = cb.Tencb,
+            SoGheTrongLoai1 = cb.Gheloai1 - db.Ves.Where(v => v.Macb == macb && v.Loaighe == 1).Sum(v => v.Soghe),
+            SoGheTrongLoai2 = cb.Gheloai2 - db.Ves.Where(v => v.Macb == macb && v.Loaighe == 2).Sum(v => v.Soghe),
+            SoGheDatLoai1 = db.Ves.Where(v => v.Macb == macb && v.Loaighe == 1).Sum(v => v.Soghe),
+            SoGheDatLoai2 = db.Ves.Where(v => v.Macb == macb && v.Loaighe == 2).Sum(v => v.Soghe)
+        })
+        .FirstOrDefault();
+
+        return result;
+    }
+
     public dynamic findAllChuyenBay(DateTime ngaydi)
     {
         

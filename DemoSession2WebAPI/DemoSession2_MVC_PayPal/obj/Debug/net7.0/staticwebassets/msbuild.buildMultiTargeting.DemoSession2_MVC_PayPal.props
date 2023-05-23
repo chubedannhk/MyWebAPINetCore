@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DemoSession2_MVC_PayPal.props" />
+</Project>

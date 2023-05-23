@@ -7,4 +7,6 @@ public interface AccountService
     public bool CreateAccount(Account account);
 
     public Account Authenticate(string username, string password);
+    // login tai khoan
+    public bool Login(string username, string password);
 }

@@ -1,5 +1,6 @@
 
 using DemoSession2WebAPI.Converters;
+using DemoSession2WebAPI.Middlewares;
 using DemoSession2WebAPI.Models;
 using DemoSession2WebAPI.Service;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,17 @@ builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingPr
 //
 builder.Services.AddScoped<ProductSerivice, ProductServiceImpl>();
 builder.Services.AddScoped<AccountService, AccountServiceImpl>();
+
 var app = builder.Build();
+
+// dua middleware vao program
+app.UseMiddleware<BasicAuthMiddleware>();
+app.UseMiddleware<Log1Middleware>();
+app.UseMiddleware<SecurityMiddleware>();
+app.UseMiddleware<Log2Middleware>();
+app.UseMiddleware<Log3Middleware>();
+
+//
 app.UseStaticFiles();
 app.MapControllers();
 
