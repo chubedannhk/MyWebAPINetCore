@@ -65,5 +65,19 @@ public class AccountController : Controller
 
         return Ok("login success");
     }
-
+    [Produces("application/json")]
+    [HttpGet("findacc")]
+    public IActionResult FindAll2()
+    {
+        try
+        {
+            var findacc = accountService.findAcc();
+            return Ok(findacc);
+        }
+        catch (Exception ex)
+        {
+            // ma 400: la co loi roi
+            return BadRequest(ex);
+        }
+    }
 }

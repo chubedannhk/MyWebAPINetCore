@@ -60,6 +60,19 @@ public class AccountServiceImpl : AccountService
         }
     }
 
+    public dynamic findAcc()
+    {
+        return db.Accounts.Select(p => new
+        {
+            Id = p.Id,
+            Username = p.Username,
+            Fullname = p.FullName,
+            Email = p.Email,
+            Status = p.Status,
+            SecutiryCode = p.SecutiryCode
+        }).ToList();
+    }
+
     public bool Login(string username, string password)
     {
         return db.Accounts.Count(a => a.Username == username && a.Password == password) >0;  

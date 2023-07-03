@@ -71,3 +71,5 @@ C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebA
 C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebAPI\obj\Debug\net7.0\DemoSession2WebAPI.genruntimeconfig.cache
 C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebAPI\obj\Debug\net7.0\ref\DemoSession2WebAPI.dll
 C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebAPI\bin\Debug\net7.0\BCrypt.Net-Core.dll
+C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebAPI\bin\Debug\net7.0\DemoSession2WebAPI.staticwebassets.runtime.json
+C:\Users\ACER\Desktop\CSharp\MyWebAPINetCore\DemoSession2WebAPI\DemoSession2WebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll

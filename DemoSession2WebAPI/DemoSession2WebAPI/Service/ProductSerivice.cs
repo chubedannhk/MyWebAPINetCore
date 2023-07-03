@@ -10,10 +10,14 @@ public interface ProductSerivice
     public dynamic findAll2();
 
     public dynamic findById(int id);
+    public Product findbyId(int id);
+    public dynamic searchBykeyword(string keyword);
+    public dynamic searchbyCategoryId(int catetoryId);
 
     public bool Created(Product product);
 
     public bool Delete(int id);
 
     public bool Update(Product product);
+
 }

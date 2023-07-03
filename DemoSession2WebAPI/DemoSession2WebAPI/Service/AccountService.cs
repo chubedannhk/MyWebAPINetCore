@@ -9,4 +9,5 @@ public interface AccountService
     public Account Authenticate(string username, string password);
     // login tai khoan
     public bool Login(string username, string password);
+    public dynamic findAcc();
 }

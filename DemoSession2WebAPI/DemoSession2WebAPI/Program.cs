@@ -7,7 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//======
+builder.Services.AddCors();
+//===========
 // AddJsonOptions(...) : dung de khai bao gi...
 builder.Services.AddControllers().AddJsonOptions(option =>
 {
@@ -19,17 +21,25 @@ builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingPr
 //
 builder.Services.AddScoped<ProductSerivice, ProductServiceImpl>();
 builder.Services.AddScoped<AccountService, AccountServiceImpl>();
+builder.Services.AddScoped<CategoryService, CategoryServiceImpl>();
 
 var app = builder.Build();
 
 // dua middleware vao program
-app.UseMiddleware<BasicAuthMiddleware>();
-app.UseMiddleware<Log1Middleware>();
-app.UseMiddleware<SecurityMiddleware>();
-app.UseMiddleware<Log2Middleware>();
-app.UseMiddleware<Log3Middleware>();
+//app.UseMiddleware<BasicAuthMiddleware>();
+//app.UseMiddleware<Log1Middleware>();
+//app.UseMiddleware<SecurityMiddleware>();
+//app.UseMiddleware<Log2Middleware>();
+//app.UseMiddleware<Log3Middleware>();
 
-//
+//lay addcors xuong su dung
+app.UseCors(builder => builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .SetIsOriginAllowed((host) => true)
+                .AllowCredentials()
+            );
+
 app.UseStaticFiles();
 app.MapControllers();
 
